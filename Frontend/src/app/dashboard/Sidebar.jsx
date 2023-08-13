@@ -20,7 +20,7 @@ export default function Sidebar({ show, setter }) {
             }}
             className={`flex gap-1 my-auto text-md pl-6 py-3 border-b-[1px] border-b-white/10 text-red`}
          >
-            <div className='flex justify-center items-center text-2xl'>
+            <div className='flex justify-center items-center text-lg'>
 
                <div className="text-xl  [&>*]:mx-auto w-[30px] align-center">
                   {icon}
@@ -43,14 +43,13 @@ export default function Sidebar({ show, setter }) {
 
    return (
       <>
-         <div className={`${className}${appendClass} pr-10 shadow-slate-200 bg`} style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px" }}>
-            <div className="p-2 flex">
+         <div className={`${className}${appendClass} pr-10 shadow-slate-200 bg-white `} style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px" }}>
+            <div className="p-2 flex m-auto justify-center items-center mt-5 ml-10 rounded" style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"}}>
                <Link href="/dashboard">
-                  {/*eslint-disable-next-line*/}
-                  <h1>Dashboard</h1>
+                  <p m-auto>Dashboard</p>
                </Link>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col mt-5">
                <MenuItem
                   name="My profile"
                   route="/dashboard"
