@@ -1,5 +1,7 @@
-'use-client'
+'use client'
 
+import axios from 'axios'
+import { NextResponse } from 'next/server'
 import React, { useState } from 'react'
 
 let initialState = {
@@ -27,7 +29,7 @@ const Register = () => {
 
     const [data, setData] = useState(initialState)
 
-    const { name, email, password, phone, image, about, skills, certifications_course_name, certifications_institute,education_duration_end,education_duration_start,education_institute,experiences_designation,experiences_duration_end,experiences_duration_start,experiences_industry,experiences_job_type,experiences_years } = data
+    const { name, email, password, phone, image, about, skills, certifications_course_name, certifications_institute, education_duration_end, education_duration_start, education_institute, experiences_designation, experiences_duration_end, experiences_duration_start, experiences_industry, experiences_job_type, experiences_years } = data
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -36,7 +38,25 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(data)
+        fetch("http://localhost:4500/user/post", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "content-type": "application/json",
+            },
+        }).then((res)=>{
+            return res.json()
+        }).then((res)=>{
+            console.log(res)
+        }).catch((e) => console.log(e));
+
+
+        // axios.post('http://localhost:4500/user/post', data)
+        //     .then((res) => {
+        //         console.log(res)
+        //     }).catch((err) => {
+        //         console.log(err)
+        //     })
     }
 
     return (
