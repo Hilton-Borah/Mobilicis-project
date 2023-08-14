@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Sidebar from './Sidebar';
 import MobileMenuBar from './MobileMenuBar';
-import Navbar from './Navbar';
+import MainDashboard from './MainDashboard';
 
 export default function Layout({ pageTitle, children }) {
   // Concatenate page title (if exists) to site title
@@ -26,7 +26,7 @@ export default function Layout({ pageTitle, children }) {
           <div className="flex min-h-screen">
             {children}
           </div>
-          <Navbar/>
+          <MainDashboard/>
         </div>
 
       </div>
