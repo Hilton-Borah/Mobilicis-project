@@ -1,7 +1,6 @@
 'use client'
 
-import axios from 'axios'
-import { NextResponse } from 'next/server'
+
 import React, { useState } from 'react'
 
 let initialState = {
@@ -36,23 +35,19 @@ const Register = () => {
         setData({ ...data, [name]: value })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
+        // console.log(data)
         e.preventDefault();
-        fetch("http://localhost:4500/user/post", {
+        let result = await fetch("http://localhost:3000/api/register", {
             method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "content-type": "application/json",
-            },
-        }).then((res)=>{
-            return res.json()
-        }).then((res)=>{
-            console.log(res)
-        }).catch((e) => console.log(e));
-
+            body: JSON.stringify(data)
+        })
+        result = await result.json();
+        console.log(result)
 
         // axios.post('http://localhost:4500/user/post', data)
         //     .then((res) => {
+
         //         console.log(res)
         //     }).catch((err) => {
         //         console.log(err)

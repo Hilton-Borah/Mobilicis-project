@@ -17,7 +17,10 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'mobilicis':'#1E2875',
-      'buttonbackground':'#F0EFFA'
+      'buttonbackground':'#F0EFFA',
+      'buttonbackground1':"#BAB6EB",
+      'textColor':'#222222E5',
+      'entire':'#FAFBFF'
     },
   },
   plugins: [],

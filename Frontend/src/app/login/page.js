@@ -1,9 +1,12 @@
+"use client"
+
 import React from 'react'
+import LoginUser from './LoginUser'
 
 const Login = () => {
   return (
     <div>
-      Hai I am Login
+      <LoginUser/>
     </div>
   )
 }
