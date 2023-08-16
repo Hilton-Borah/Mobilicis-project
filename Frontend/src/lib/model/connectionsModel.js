@@ -7,7 +7,7 @@ const connectionSchema = mongoose.Schema({
     image: String
 })
 
-const connectionModel = mongoose.models.userdata || mongoose.model("connectiondata", connectionSchema)
+const connectionModel = mongoose.models.connectiondata || mongoose.model("connectiondata", connectionSchema)
 
 module.exports = {
     connectionModel

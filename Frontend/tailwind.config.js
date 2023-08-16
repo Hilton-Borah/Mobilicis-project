@@ -17,6 +17,7 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'mobilicis':'#1E2875',
+      'mobilicisLite':'rgb(55, 63, 118)',
       'buttonbackground':'#F0EFFA',
       'buttonbackground1':"#BAB6EB",
       'textColor':'#222222E5',

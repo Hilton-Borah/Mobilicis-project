@@ -28,7 +28,6 @@ export default function Layout({ pageTitle, children }) {
           </div>
           <MainDashboard/>
         </div>
-
       </div>
     </>
   )

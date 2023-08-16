@@ -4,8 +4,8 @@ const PeopleCard = ({name,job_role,organisation,button,image}) => {
   return (
     <div className='w-80 flex justify-evenly items-center rounded-lg p-7 gap-3' style={{boxShadow: "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px"}}>
         <div>
-            <p className='fot-semibold'>{name}</p>
-            <div className='mt-2 text-sm text-textColor'>
+            <p className='font-semibold'>{name}</p>
+            <div className='mt-2 text-xs text-textColor'>
                 <p>{job_role}</p>
                 <p>{organisation}</p>
             </div>

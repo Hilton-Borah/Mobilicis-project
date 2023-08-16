@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PeopleCard from '../componants/PeopleCard'
 
 const Connections = () => {
@@ -28,6 +28,25 @@ const Connections = () => {
 
         }
     ]
+
+
+
+    const [userData, setuserData] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/api/connection")
+            .then((res) => {
+                return res.json();
+            }).then((res) => {
+                setuserData(res.success)
+                console.log(res.success)
+            }).catch((err) => {
+                return err
+            })
+    }, [])
+
+// console.log(userData)
+
   return (
     <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
       {

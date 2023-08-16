@@ -50,6 +50,7 @@ const userSchema = mongoose.Schema({
     education_institute: String,
     education_duration_start: String,
     education_duration_end: String,
+    education_summary: String,
     experiences_years: String,
     experiences_duration_start: String,
     experiences_duration_end: String,
