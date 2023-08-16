@@ -24,7 +24,7 @@ const LoginUser = () => {
 
   const handleClick = async (e) => {
     e.preventDefault()
-    let result = await fetch("http://localhost:3000/api/login", {
+    let result = await fetch("api/login", {
       method: "POST",
       body: JSON.stringify({ email, password })
     })

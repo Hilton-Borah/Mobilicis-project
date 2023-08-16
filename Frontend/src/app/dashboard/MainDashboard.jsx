@@ -24,7 +24,7 @@ const MainDashboard = () => {
     const [userData, setuserData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/register")
+        fetch("api/register")
             .then((res) => {
                 return res.json();
             }).then((res) => {
@@ -58,7 +58,7 @@ const MainDashboard = () => {
             {
                 userData && userData.map((el) => {
                     return (
-                        <div className='w-full lg:w-full border h-48 mt-5 bg-mobilicis rounded-lg p-3'>
+                        <div className='w-full lg:w-full border h-48 mt-5 bg-mobilicis rounded-lg p-3' key={el.id}>
                             <p className='text-white'>My profile</p>
                             <div className='w-11/12 grid grid-cols-1 lg:flex h-auto m-auto mt-10 lg:mt-20 h-full bg-white rounded-lg' style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
                                 <LeftPart key={el.id} name={el.name} email={el.email} phone={el.phone} about={el.about} skills={el.skills} />

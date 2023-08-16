@@ -2,9 +2,9 @@ import React from 'react'
 import Button from '../componants/Button'
 import Name from '../componants/Name'
 
-const RightPart = ({certifications_course_name, certifications_institute, education_duration_end, education_duration_start, education_institute, experiences_designation, experiences_duration_end, experiences_duration_start, experiences_industry, experiences_job_type, experiences_years}) => {
+const RightPart = ({id,certifications_course_name, certifications_institute, education_duration_end, education_duration_start, education_institute, experiences_designation, experiences_duration_end, experiences_duration_start, experiences_industry, experiences_job_type, experiences_years}) => {
     return (
-        <div className='w-full md:w-1/2 rounded-lg text-black p-5 md:p-10'>
+        <div className='w-full md:w-1/2 rounded-lg text-black p-5 md:p-10' key={id}>
             <div className='p-5 rounded-lg flex justify-between items-center text-sm mt-2 mb-3' style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
                 <div className='mt-2 mb-3 w-3/4'>
                     <p className='font-semibold text-lg mb-2'>Professional Details</p>

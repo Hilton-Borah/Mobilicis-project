@@ -39,7 +39,7 @@ const Recommended = () => {
               {
                   arr && arr.map((el) => {
                       return (
-                          <div>
+                          <div key={el.id}>
                               <PeopleCard key={el.id} name={el.name} job_role={el.job_role} organisation={el.organisation} image={el.image} button={"Connect"} />
                           </div>
                       )

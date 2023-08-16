@@ -42,7 +42,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         // console.log(data)
         e.preventDefault();
-        let result = await fetch("http://localhost:3000/api/register", {
+        let result = await fetch("api/register", {
             method: "POST",
             body: JSON.stringify(data)
         })

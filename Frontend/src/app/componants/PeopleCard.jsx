@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const PeopleCard = ({name,job_role,organisation,button,image}) => {

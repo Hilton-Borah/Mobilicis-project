@@ -5,7 +5,7 @@ import Button from '../componants/Button'
 import Name from '../componants/Name'
 import Modal from '../componants/Modal'
 
-const LeftPart = ({name,email,phone,about,skills}) => {
+const LeftPart = ({id,name,email,phone,about,skills}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
@@ -16,7 +16,7 @@ const LeftPart = ({name,email,phone,about,skills}) => {
       setIsModalOpen(false);
     };
     return (
-        <div className='w-full md:w-1/2 rounded-lg text-black p-5 md:p-10'>
+        <div className='w-full md:w-1/2 rounded-lg text-black p-5 md:p-10' key={id}>
             <div className='sm:w-full flex justify-between items-center p-5'>
                 <img className='w-24 border rounded-full' src="https://t3.ftcdn.net/jpg/03/42/99/68/360_F_342996846_tHMepJOsXWwbvMpG7uiYpE68wbfQ9e4s.jpg" alt="" />
                 <Button text={"Upload photo"} onClick={openModal}/>
